@@ -1,0 +1,10 @@
+<mat-form-field>
+    <mat-label>Seleccione una fecha</mat-label>
+  <!-- #docregion toggle -->
+    <input matInput [matDatepicker]="picker" [max]="getPreviousDay(dateToday)" (dateChange)="logData($event)">
+    <mat-hint>DD/MM/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  <!-- #enddocregion toggle -->
+</mat-form-field>
+  
