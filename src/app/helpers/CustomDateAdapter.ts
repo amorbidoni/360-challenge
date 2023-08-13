@@ -1,5 +1,7 @@
+import { Injectable } from "@angular/core";
 import { NativeDateAdapter } from "@angular/material/core";
 
+@Injectable() 
 // Este adaptador es para que se seleccione la fecha correcta en Material Date Picker cuando la escribo en el input y no invierta los meses y dias
 export class CustomDateAdapter extends NativeDateAdapter {
 
