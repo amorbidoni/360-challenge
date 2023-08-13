@@ -9,17 +9,20 @@ import { CollectionsReportService } from 'src/app/services/collections-report.se
 })
 export class CollectionsReportComponent implements OnInit {
   collectionsReport!:CollectionsReportResult  
-  constructor(private collectionsReportService: CollectionsReportService){}
   registerItems:CollectionsReportItemResult[] = []
+  isLoading:boolean = true;
+  constructor(private collectionsReportService: CollectionsReportService){}
 
   ngOnInit(): void {
     this.getCollectionsReport(`17-10-2022`)
   }
   
   getCollectionsReport(date:string){
+    this.isLoading = true;
     this.collectionsReportService.getCollectionsReport(date).subscribe(res=>{
       this.collectionsReport = res;
       this.registerItems = res.data;
+      this.isLoading = false;
     })
   }
 }

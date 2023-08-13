@@ -1,29 +1,30 @@
 <div>
     <p>collections-report</p>
     <app-date-picker (onDateSelectEmitter)="getCollectionsReport($event)"></app-date-picker>
-    <div>
+    <div *ngIf="!isLoading;else loader">
         <ng-container  *ngIf="registerItems.length > 0; else noDataMessage">
             <table>
                 <thead>
                     <tr>
                         <th>Nombre</th>
-                        <th>Descripcion</th>
+                        <th>Description</th>
                         <th>Canal</th>
                         <th>Total Pagado</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let registerItem of registerItems">
-                        <td>{{registerItem.payer_name}}</td>
-                        <td>{{registerItem.description}}</td>
-                        <td>{{registerItem.channel}}</td>
-                        <td>{{registerItem.amount_paid}}</td>
+                    <tr app-collections-report-item 
+                        *ngFor="let registerItem of registerItems" 
+                        [registerItem]="registerItem">
                     </tr>
                 </tbody>
             </table>
         </ng-container>
         <ng-template  #noDataMessage>
-            <p colspan="4">Sin datos registrados</p>
+            <p colspan="4">Sin datos registrados en esta fecha...</p>
         </ng-template>
     </div>
+    <ng-template #loader>
+        <app-loader></app-loader>
+    </ng-template>
 </div>

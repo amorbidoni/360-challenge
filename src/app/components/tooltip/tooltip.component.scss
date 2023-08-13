@@ -1,0 +1,19 @@
+.tooltip {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height .5s;
+    top: 0;
+    left: 100%;
+    padding: 1rem;
+    p{
+        margin: 0;
+    }
+}

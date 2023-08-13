@@ -1,0 +1,12 @@
+.money {
+    text-align: right;
+}
+.tooltip-container{
+    position: relative;
+    cursor: pointer;
+    &:hover .tooltip{
+        width: 350px;
+        height: auto;
+        opacity: 1;
+    }
+}

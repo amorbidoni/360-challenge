@@ -1,11 +1,30 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { CustomDateAdapter } from 'src/app/helpers/CustomDateAdapter';
+
+
+export const MY_FORMATS = {
+  parse: {
+    dateInput: 'LL',
+  },
+  display: {
+    dateInput: 'DD/MM/YYYY',
+    monthYearLabel: 'MMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY',
+  },
+};
 
 @Component({
   selector: 'app-date-picker',
   templateUrl: './date-picker.component.html',
   styleUrls: ['./date-picker.component.scss'],
-
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }, 
+    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS }, 
+    { provide: DateAdapter, useClass: CustomDateAdapter }
+  ]
 })
 export class DatePickerComponent implements OnInit {
   @Output() onDateSelectEmitter:EventEmitter<string> = new EventEmitter<string>()
@@ -23,7 +42,9 @@ export class DatePickerComponent implements OnInit {
   getDateString(d:Date){
     return d.toLocaleDateString("en-GB")   
   }
-  logData(e:MatDatepickerInputEvent<any, any> ){
+  selectDate(e:MatDatepickerInputEvent<any, any> ){
     this.onDateSelectEmitter.emit(this.getDateString(e.value).replace(/\//g, "-"))
   }
+  
+  
 }
