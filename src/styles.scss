@@ -1,5 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 @import './styles/base/base';
+@import './styles/abstract/variables';
 @import './styles/base/utilities';
 @import './styles/abstract/mixins';
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: var(--color-primary);
+}
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label{
+    color: var(--color-primary-dark);
+}
+.mat-datepicker-toggle-active{
+    color: var(--color-primary-dark);
+}
+.mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: var(--color-primary-dark);
+}
+.mdc-text-field .mdc-text-field__input{
+    color: var(--color-white);
+}
+.mdc-text-field .mdc-text-field__input::placeholder{
+    
+    color: var(--color-white);
+}
+.mat-datepicker-content{
+    background-color: var(--color-primary-dark);
+}
+.mat-calendar-body-selected{
+    background-color: var(--color-primary);
+}
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
+    background-color: var(--color-primary);
+}
 

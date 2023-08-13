@@ -1,6 +1,6 @@
 export interface CollectionsReportResult {
     account_id:string,
-    report_date:Date,
+    report_date:string,
     total_collected:number,
     total_gross_fee:number,
     total_net_amount:number,
@@ -10,7 +10,7 @@ export interface CollectionsReportResult {
 export interface CollectionsReportItemResult {
     informed_date:Date,
     request_id:number,
-    description:string,
+    description:string
     external_reference:string,
     payer_name:string,
     channel:string,

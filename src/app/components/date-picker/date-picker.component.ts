@@ -15,6 +15,8 @@ export const MY_FORMATS = {
     monthYearA11yLabel: 'MMMM YYYY',
   },
 };
+export const INITIAL_DATE = '10-17-2022'
+export const INITIAL_DATE_GB = '17-10-2022'
 
 @Component({
   selector: 'app-date-picker',
@@ -29,8 +31,9 @@ export const MY_FORMATS = {
 export class DatePickerComponent implements OnInit {
   @Output() onDateSelectEmitter:EventEmitter<string> = new EventEmitter<string>()
   dateToday:Date = new Date();
-
+  initialDate = new Date(INITIAL_DATE)
   ngOnInit(): void {
+    console.log(this.initialDate)
   }
 
 

@@ -8,3 +8,22 @@ table td, table th{
 td, th{
     border: 1px solid black;
 }
+.register-item-row:nth-child(odd){
+    background-color: var(--color-primary-transparent);
+}
+.report{
+    &__resume{
+        width: 100%;
+        margin-bottom: 2rem;
+        border-collapse: inherit;
+        text-align: center;
+        thead{
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            th{
+                border: none;
+            }
+            
+        }
+    }
+}

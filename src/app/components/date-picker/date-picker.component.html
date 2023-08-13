@@ -1,9 +1,9 @@
 <mat-form-field>
     <mat-label>DD/MM/YYYY</mat-label>
   <!-- #docregion toggle -->
-    <input matInput [matDatepicker]="picker" [max]="getPreviousDay(dateToday)" (dateChange)="selectDate($event)">
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
+    <input matInput [matDatepicker]="picker" [max]="getPreviousDay(dateToday)" (dateChange)="selectDate($event)" >
+    <mat-datepicker-toggle matIconSuffix [for]="picker" ></mat-datepicker-toggle>
+    <mat-datepicker #picker [startAt]="initialDate"></mat-datepicker>
   <!-- #enddocregion toggle -->
 </mat-form-field>
   

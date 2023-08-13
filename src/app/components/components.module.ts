@@ -12,6 +12,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { LoaderComponent } from './loader/loader.component';
+import { ContainerComponentComponent } from './container-component/container-component.component';
 
 
 @NgModule({
@@ -27,11 +28,13 @@ import { LoaderComponent } from './loader/loader.component';
     DatePickerComponent,
     MessageModalComponent,
     TooltipComponent,
-    LoaderComponent],
+    LoaderComponent,
+    ContainerComponentComponent],
   exports:[ 
     DatePickerComponent,
     TooltipComponent,
-    LoaderComponent
+    LoaderComponent,
+    ContainerComponentComponent
   ],
 
 })
