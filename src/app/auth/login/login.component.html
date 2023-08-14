@@ -1,0 +1,25 @@
+<app-container-component title="Login" [hasMinimizeButton]="false" [scrollContainer]="false">
+    <form class="form" (ngSubmit)="login()">
+        <div class="form__item">
+            <label for="user" class="form__item--label">Usuario</label>
+            <input
+                id="user"
+                type="text"
+                class="form__item--input"
+                [(ngModel)]="user"
+                name="name">
+        </div>
+        <div class="form__item">
+            <label for="password" class="form__item--label">Contraseña</label>
+            <input
+                id="password"
+                type="password"
+                class="form__item--input"
+                [(ngModel)]="password"
+                name="password">
+        </div>
+        <button class="btn-primary" type="submit">
+            Login
+        </button>
+    </form>
+</app-container-component>

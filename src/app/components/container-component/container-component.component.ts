@@ -8,7 +8,10 @@ import { Component, Input } from '@angular/core';
 export class ContainerComponentComponent {
   @Input() title:string = '';
   @Input() isOpen:boolean = true;
+  @Input() hasMinimizeButton:boolean =true;
+  @Input() scrollContainer:boolean = true;
   toggleIsOpen(){
     this.isOpen = !this.isOpen;
   }
+
 }
