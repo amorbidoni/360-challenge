@@ -1,0 +1,38 @@
+.btn {
+    border: 2px solid var(--color-primary);
+    box-shadow: var(--box-shadow-light);
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    transition: .5s;
+    &-primary{
+        padding: 1rem 4rem;
+        background-color:transparent;
+        border-radius: 1rem;
+        margin: 2rem 0;
+    }
+    &:hover{
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        box-shadow: var(--box-shadow-med);
+    }
+    &-logout{
+        background-color: var(--color-light-transparent);
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            fill: var(--color-primary);
+            width: 2rem;
+            transition: .5s;
+        }
+        &:hover svg{
+            fill: var(--color-white);
+        }
+    }
+}
+
+

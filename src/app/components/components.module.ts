@@ -13,6 +13,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { LoaderComponent } from './loader/loader.component';
 import { ContainerComponentComponent } from './container-component/container-component.component';
+import { LogoutButtonComponent } from './logout-button/logout-button.component';
 
 
 @NgModule({
@@ -29,12 +30,14 @@ import { ContainerComponentComponent } from './container-component/container-com
     MessageModalComponent,
     TooltipComponent,
     LoaderComponent,
-    ContainerComponentComponent],
+    ContainerComponentComponent,
+    LogoutButtonComponent],
   exports:[ 
     DatePickerComponent,
     TooltipComponent,
     LoaderComponent,
-    ContainerComponentComponent
+    ContainerComponentComponent,
+    LogoutButtonComponent
   ],
 
 })

@@ -26,20 +26,5 @@
     }
 }
 .btn-primary{
-    align-self: flex-end;
-    border: 2px solid var(--color-primary);
-    padding: 1rem 4rem;
-    background-color:transparent;
-    border-radius: 1rem;
-    margin: 2rem 0;
-    box-shadow: var(--box-shadow-light);
-    cursor: pointer;
-    font-weight: 700;
-    color: var(--color-primary-dark);
-    transition: .5s;
-    &:hover{
-        background-color: var(--color-primary);
-        color: var(--color-white);
-        box-shadow: var(--box-shadow-med);
-    }
+    align-self: flex-end;  
 }

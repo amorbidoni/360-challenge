@@ -3,9 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { CollectionsReportComponent } from './pages/collections-report/collections-report.component';
 import { authGuard } from './guards/auth.guard';
 import { LoginComponent } from './auth/login/login.component';
+import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
-  { path: 'collectionsReport', component: CollectionsReportComponent, canActivate: [authGuard] },
+
+  { path:'main', 
+    loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), 
+    canActivate: [authGuard]
+  },
   { path:'login', component: LoginComponent },
   { path:'', redirectTo:'/login', pathMatch: 'full'},
   // TODO: crear el componente pagenotfound

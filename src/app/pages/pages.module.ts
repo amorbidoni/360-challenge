@@ -5,10 +5,11 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { CollectionsReportComponent } from './collections-report/collections-report.component';
 import { ComponentsModule } from '../components/components.module';
 import { CollectionsReportItemComponent } from './collections-report/collections-report-item/collections-report-item.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
-  declarations: [CollectionsReportComponent, CollectionsReportItemComponent ],
+  declarations: [CollectionsReportComponent, CollectionsReportItemComponent, MainComponent ],
   imports: [
     CommonModule,
     PagesRoutingModule,

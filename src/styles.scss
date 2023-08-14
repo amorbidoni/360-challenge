@@ -3,6 +3,8 @@
 @import './styles/abstract/variables';
 @import './styles/base/utilities';
 @import './styles/abstract/mixins';
+@import './styles/components/buttons';
+
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
     background-color: var(--color-primary);
