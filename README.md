@@ -31,9 +31,20 @@ otra mejora que se podria implementar es mostrar un numero limitado de reportes 
 
 ```bash
 git clone https://github.com/amorbidoni/360-challenge.git
-
+```
+2. Navega a la carpeta del proyecto.
+```bash
+cd 360Challenge
 ```
 
+3. Instala las dependencias.
+```bash
+npm install
+```
+4. Inicia el servidor de desarrollo.
+```bash
+    ng serve
+```
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
