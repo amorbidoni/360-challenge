@@ -19,7 +19,18 @@ Para mejorar esta aplicacion pensaria en hacerlo responsive (en la carpeta style
 otra mejora que se podria implementar es mostrar un numero limitado de reportes para que la tabla no se haga tan grande con la opcion mostrar mas. En caso de que la tabla se haga muy grande se podria fijar en la parte superior el encabezado de la misma para no perderlo.
 
 
-  
+## Requisitos Previos
+
+- Node.js (versión 14 o superior)
+- Angular CLI (versión 15.1.6)
+- Navegador web moderno
+
+## Instalación
+
+1. Clona este repositorio o descarga el código fuente.
+
+```bash
+git clone https://github.com/amorbidoni/360-challenge.git
 
 ## Development server
 
