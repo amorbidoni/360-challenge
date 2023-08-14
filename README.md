@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Este proyecto es un challenge para la empresa PAGOS360, en el mismo decidi enfocarme en cumplir con al consigna pero pensando en una arquitectura escalable encontrando los siguientes directorios:
 
- - auth: todo lo relacionado al login, tiene su propio modulo y modulo de rutas (esto es  ya que en el mismo se puede incluir el formulario de sign in de forma simple)
+ - auth: todo lo relacionado al login, tiene su propio modulo y modulo de rutas (esto es  ya que en el mismo se puede incluir el formulario de sign in de forma simple) Simule un usuario y contrasena 'user' y 'password' que se meustran por defecto para poder ingresar a la app (esto logicamente no se mostraria por defecto en la app real) 
  - components: pequenos componentes utilizados de forma compartida en diferentes lugares de la app
  - guards: en esta carpeta se encontrarian los guards con sus respectivas funciones para controlar el acceso a las diferentes partes de la aplicacion 
  - helpers: funciones compartidas que pueden ser de utilidad en diferentes lugares de la app, (en este caso tengo un adaptador de formato de fechas)
