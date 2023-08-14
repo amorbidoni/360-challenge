@@ -2,6 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
+Este proyecto es un challenge para la empresa PAGOS360, en el mismo decidi enfocarme en cumplir con al consigna pero pensando en una arquitectura escalable encontrando los siguientes directorios:
+
+ - auth: todo lo relacionado al login, tiene su propio modulo y modulo de rutas (esto es  ya que en el mismo se puede incluir el formulario de sign in de forma simple)
+ - components: pequenos componentes utilizados de forma compartida en diferentes lugares de la app
+ - guards: en esta carpeta se encontrarian los guards con sus respectivas funciones para controlar el acceso a las diferentes partes de la aplicacion 
+ - helpers: funciones compartidas que pueden ser de utilidad en diferentes lugares de la app, (en este caso tengo un adaptador de formato de fechas)
+ - interfaces
+ - pages: landin pages de la aplicacion 
+ - services
+ - shared: en esta carpeta se encontrarian elementos compartidos mas complejos que los que se encuentran en la carpeta components, como navbar, un header, un footer, sidebar y lo que considere necesario. 
+ - por otra parte en el src tengo la carpeta styles donde ordeno algunos estilos compartidos en toda la aplicacion.
+ 
+Para mejorar esta aplicacion pensaria en hacerlo responsive (en la carpeta styles/abstract tengo un archivo con mixins de scss en donde configuro diferentes brackpoints), para eso se podria hacer mobile first (esto dependeria del uso que se le de a la aplicacion), para lo cual se podria adaptar la tabla priorizando una primera vista de datos de mayor importancia y pudiendo desglozar el detalle de cada reporte en mobile.
+
+otra mejora que se podria implementar es mostrar un numero limitado de reportes para que la tabla no se haga tan grande con la opcion mostrar mas. En caso de que la tabla se haga muy grande se podria fijar en la parte superior el encabezado de la misma para no perderlo.
+
+
+  
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
