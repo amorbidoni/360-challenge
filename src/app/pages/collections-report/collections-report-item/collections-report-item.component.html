@@ -3,4 +3,7 @@
 </td>
 <td>{{registerItem.description}}</td>
 <td>{{registerItem.channel}}</td>
+<td class="money">{{registerItem.net_fee | currency :'$ '}}</td>
+<td class="money">{{registerItem.iva_fee | currency :'$ '}}</td>
+<td class="money">{{registerItem.net_amount | currency :'$ '}}</td>
 <td class="money">{{registerItem.amount_paid | currency :'$ '}}</td>

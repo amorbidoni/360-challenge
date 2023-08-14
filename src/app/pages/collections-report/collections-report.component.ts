@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { INITIAL_DATE_GB } from 'src/app/components/date-picker/date-picker.component';
 import { CollectionsReportItemResult, CollectionsReportResult } from 'src/app/interfaces/collections-report-result';
 import { CollectionsReportService } from 'src/app/services/collections-report.service';
@@ -13,6 +13,9 @@ export class CollectionsReportComponent implements OnInit {
   registerItems:CollectionsReportItemResult[] = [];
   isLoading:boolean = true;
   selectedDate:string = INITIAL_DATE_GB;
+
+
+
   constructor(private collectionsReportService: CollectionsReportService){}
 
   ngOnInit(): void {
@@ -26,10 +29,11 @@ export class CollectionsReportComponent implements OnInit {
       this.collectionsReport = res;
       this.registerItems = res.data;
       this.isLoading = false;
-      console.log(this.collectionsReport)
     })
   }
   getSelectedDate(date:string):string{
     return new Date(date).toLocaleDateString('es-ES', {day:"2-digit", month:"long", year:"numeric"});
   }
+
+
 }

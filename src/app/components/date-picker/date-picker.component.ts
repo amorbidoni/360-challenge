@@ -33,7 +33,6 @@ export class DatePickerComponent implements OnInit {
   dateToday:Date = new Date();
   initialDate = new Date(INITIAL_DATE)
   ngOnInit(): void {
-    console.log(this.initialDate)
   }
 
 

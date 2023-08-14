@@ -10,9 +10,7 @@ export class AuthService {
   constructor(private router: Router) { }
   isAuthenticated = false;
   getIsAuthenticated(){
-    return of(this.isAuthenticated).pipe(
-      tap((v) => console.log(v) )
-    ) 
+    return of(this.isAuthenticated)
   }
   login(username: string, password: string): boolean {
     
