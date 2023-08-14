@@ -11,7 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), 
     canActivate: [authGuard]
   },
-  { path:'login', component: LoginComponent },
+  { 
+    path:'login', 
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule), 
+  },
   { path:'', redirectTo:'/login', pathMatch: 'full'},
   // TODO: crear el componente pagenotfound
   // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
